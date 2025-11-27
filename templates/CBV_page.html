@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>This is a CBV Template Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name">SName:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="text">SAge</label>
+        <input type="text" id="age" name="age"><br><br>
+        <label for="text">SLoc</label>
+        <input type="text" id="loc" name="loc"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </center>
+</body>
+</html>

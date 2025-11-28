@@ -3,8 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 from app.forms import *
 from django.views.generic import TemplateView
+from django.views.generic import FormView
 from app.models import *
 from django.http import HttpResponse
+
 
 class RenderHtmlByTV(TemplateView):
     template_name = 'RenderHtmlByTV.html'
@@ -30,3 +32,12 @@ class InsertByTV(TemplateView):
             return HttpResponse('Data Inserted Successfully')
         else:
             return HttpResponse('Data Insertion Failed')
+        
+
+class InsertByFV(FormView):
+    template_name = 'InsertByFV.html'
+    form_class = StudentMF
+    
+    def form_valid(self, form):
+        form.save()
+        return HttpResponse('Data Inserted Successfully using FormView')

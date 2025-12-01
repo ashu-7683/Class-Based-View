@@ -10,7 +10,7 @@
         <h1>School List</h1>
             {% for so in QSLSO %}
                 
-                <a href=""><h2>{{ so.scname }}</h2></a>
+                <a href="{{ so.pk }}"><h2>{{ so.scname }}</h2></a>
             {% endfor %}
     </center>
 </body>

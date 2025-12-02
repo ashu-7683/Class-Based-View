@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>School List</h1>
+        <h1>schhool Name: {{ object.scname }}</h1>
+        <h1>schhool City: {{ object.scloc }}</h1>
+        <h1>schhool Principal: {{ object.scprincipal }}</h1>
+        <h2>Students in this school:</h2>
+        {% for stu in RSO.students.all %}
+            <h2>student name is :{{ stu.stname }}</h2>
+            <h2>student age is :{{ stu.stage }}</h2>
+        {% endfor %}
+    </center>
+</body>
+</html>

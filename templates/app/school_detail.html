@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>School Detail</title>
+{% endblock %}
+{% block body_block %}
     <center>
         <h1>School List</h1>
         <h1>schhool Name: {{ object.scname }}</h1>
@@ -17,5 +15,4 @@
             <h2>student age is :{{ stu.stage }}</h2>
         {% endfor %}
     </center>
-</body>
-</html>
+{% endblock %}

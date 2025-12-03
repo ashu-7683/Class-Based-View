@@ -6,7 +6,7 @@ from django.views.generic.detail import DetailView
 from app.models import *
 
 class home(TemplateView):
-    template_name='app/dummy.html'
+    template_name='app/home.html'
 
 class school_list(ListView):
     model = School

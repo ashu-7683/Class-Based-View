@@ -2,8 +2,7 @@ import re
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView,TemplateView,CreateView,UpdateView,DeleteView
-from django.views.generic.detail import DetailView
+from django.views.generic import ListView,TemplateView,CreateView,UpdateView,DeleteView,DetailView
 from app.models import *
 from django.urls import reverse_lazy
 

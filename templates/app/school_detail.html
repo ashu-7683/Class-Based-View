@@ -6,13 +6,17 @@
 {% block body_block %}
     <center>
         <h1>School List</h1>
-        <h1>schhool Name: {{ object.scname }}</h1>
-        <h1>schhool City: {{ object.scloc }}</h1>
-        <h1>schhool Principal: {{ object.scprincipal }}</h1>
+        <h1>schhool Name: {{ RSO.scname }}</h1>
+        <h1>schhool City: {{ RSO.scloc }}</h1>
+        <h1>schhool Principal: {{ RSO.scprincipal }}</h1>
         <h2>Students in this school:</h2>
         {% for stu in RSO.students.all %}
             <h2>student name is :{{ stu.stname }}</h2>
             <h2>student age is :{{ stu.stage }}</h2>
         {% endfor %}
+
+        <a href="{% url 'school_update'  pk=RSO.pk %}" class="btn btn-danger">Update School</a>
+
+        <a href="{% url 'school_delete'  pk=RSO.pk %}" class="btn btn-dark">Delete School</a>
     </center>
 {% endblock %}

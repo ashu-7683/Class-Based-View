@@ -25,5 +25,7 @@ urlpatterns = [
     path('school_create/', school_create.as_view(), name='school_create'),
     path('home/', home.as_view(), name='home'),
     
-    re_path('(?P<pk>\d+)/', school_detail.as_view(), name='detail'),
+    re_path('^update/(?P<pk>\d+)/', school_update.as_view(), name='school_update'),
+    re_path('^delete/(?P<pk>\d+)/',school_delete.as_view(),name='school_delete'),
+    re_path('(?P<pk>\d+)/', school_detail.as_view(), name='school_detail'),
 ]
